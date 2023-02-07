@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30DFD4A9299270F7001D2F80 /* KeepInTouchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */; };
+		30DFD4AB299270F7001D2F80 /* GroupIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD4AA299270F7001D2F80 /* GroupIconView.swift */; };
+		30DFD4AD299270F9001D2F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DFD4AC299270F9001D2F80 /* Assets.xcassets */; };
+		30DFD4B0299270F9001D2F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DFD4AF299270F9001D2F80 /* Preview Assets.xcassets */; };
+		30EF283F29A3FE9200294159 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF283E29A3FE9200294159 /* Person.swift */; };
+		30EF284229A4004200294159 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284129A4004200294159 /* Group.swift */; };
+		30EF284429A400A800294159 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284329A400A800294159 /* ColorTheme.swift */; };
+		30EF284629A5047700294159 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284529A5047700294159 /* Sample.swift */; };
+		30EF284829A5076000294159 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284729A5076000294159 /* StarterView.swift */; };
+		30EF284A29A5078500294159 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284929A5078500294159 /* CarouselView.swift */; };
+		30EF284C29A507AA00294159 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284B29A507AA00294159 /* GridView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30DFD4A5299270F7001D2F80 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchApp.swift; sourceTree = "<group>"; };
+		30DFD4AA299270F7001D2F80 /* GroupIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupIconView.swift; sourceTree = "<group>"; };
+		30DFD4AC299270F9001D2F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30DFD4AF299270F9001D2F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30EF283E29A3FE9200294159 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		30EF284129A4004200294159 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		30EF284329A400A800294159 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		30EF284529A5047700294159 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		30EF284729A5076000294159 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
+		30EF284929A5078500294159 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		30EF284B29A507AA00294159 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30DFD4A2299270F7001D2F80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30DFD49C299270F7001D2F80 = {
+			isa = PBXGroup;
+			children = (
+				30DFD4A7299270F7001D2F80 /* KeepInTouch */,
+				30DFD4A6299270F7001D2F80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30DFD4A6299270F7001D2F80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30DFD4A5299270F7001D2F80 /* KeepInTouch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30DFD4A7299270F7001D2F80 /* KeepInTouch */ = {
+			isa = PBXGroup;
+			children = (
+				30EF284029A3FE9800294159 /* Models */,
+				30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */,
+				30EF284729A5076000294159 /* StarterView.swift */,
+				30EF284929A5078500294159 /* CarouselView.swift */,
+				30EF284B29A507AA00294159 /* GridView.swift */,
+				30DFD4AA299270F7001D2F80 /* GroupIconView.swift */,
+				30DFD4AC299270F9001D2F80 /* Assets.xcassets */,
+				30DFD4AE299270F9001D2F80 /* Preview Content */,
+				30EF284529A5047700294159 /* Sample.swift */,
+			);
+			path = KeepInTouch;
+			sourceTree = "<group>";
+		};
+		30DFD4AE299270F9001D2F80 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30DFD4AF299270F9001D2F80 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30EF284029A3FE9800294159 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30EF284129A4004200294159 /* Group.swift */,
+				30EF283E29A3FE9200294159 /* Person.swift */,
+				30EF284329A400A800294159 /* ColorTheme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30DFD4A4299270F7001D2F80 /* KeepInTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30DFD4B3299270F9001D2F80 /* Build configuration list for PBXNativeTarget "KeepInTouch" */;
+			buildPhases = (
+				30DFD4A1299270F7001D2F80 /* Sources */,
+				30DFD4A2299270F7001D2F80 /* Frameworks */,
+				30DFD4A3299270F7001D2F80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepInTouch;
+			productName = KeepInTouch;
+			productReference = 30DFD4A5299270F7001D2F80 /* KeepInTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30DFD49D299270F7001D2F80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					30DFD4A4299270F7001D2F80 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 30DFD4A0299270F7001D2F80 /* Build configuration list for PBXProject "KeepInTouch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30DFD49C299270F7001D2F80;
+			productRefGroup = 30DFD4A6299270F7001D2F80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30DFD4A4299270F7001D2F80 /* KeepInTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30DFD4A3299270F7001D2F80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30DFD4B0299270F9001D2F80 /* Preview Assets.xcassets in Resources */,
+				30DFD4AD299270F9001D2F80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30DFD4A1299270F7001D2F80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EF284829A5076000294159 /* StarterView.swift in Sources */,
+				30EF283F29A3FE9200294159 /* Person.swift in Sources */,
+				30EF284629A5047700294159 /* Sample.swift in Sources */,
+				30EF284429A400A800294159 /* ColorTheme.swift in Sources */,
+				30DFD4AB299270F7001D2F80 /* GroupIconView.swift in Sources */,
+				30DFD4A9299270F7001D2F80 /* KeepInTouchApp.swift in Sources */,
+				30EF284A29A5078500294159 /* CarouselView.swift in Sources */,
+				30EF284C29A507AA00294159 /* GridView.swift in Sources */,
+				30EF284229A4004200294159 /* Group.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		30DFD4B1299270F9001D2F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30DFD4B2299270F9001D2F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30DFD4B4299270F9001D2F80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KeepInTouch/Preview Content\"";
+				DEVELOPMENT_TEAM = M2L3X2RFT6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iKorobov.KeepInTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30DFD4B5299270F9001D2F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KeepInTouch/Preview Content\"";
+				DEVELOPMENT_TEAM = M2L3X2RFT6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iKorobov.KeepInTouch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30DFD4A0299270F7001D2F80 /* Build configuration list for PBXProject "KeepInTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30DFD4B1299270F9001D2F80 /* Debug */,
+				30DFD4B2299270F9001D2F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30DFD4B3299270F9001D2F80 /* Build configuration list for PBXNativeTarget "KeepInTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30DFD4B4299270F9001D2F80 /* Debug */,
+				30DFD4B5299270F9001D2F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30DFD49D299270F7001D2F80 /* Project object */;
+}
