@@ -14,7 +14,6 @@ struct GroupIconView: View {
     
     var body: some View {
             GeometryReader { geometry in
-                NavigationLink(destination: , label: <#T##() -> _#>) {
                     Circle()
                         .strokeBorder(theme.accentColor, lineWidth: geometry.size.width * 0.02)
                         .background(Circle().foregroundColor(theme.mainColor))
@@ -25,7 +24,6 @@ struct GroupIconView: View {
                                 .font(.title)
                                 .foregroundColor(theme.accentColor)
                     }
-                }
             }
 
 

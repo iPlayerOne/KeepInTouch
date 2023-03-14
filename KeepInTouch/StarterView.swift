@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct StarterView: View {
+    @State private var isGrid = false
     var body: some View {
         NavigationView {
-            CarouselView()
+            ZStack{
+                if isGrid {
+                    GridView()
+                } else {
+                    CarouselView()
+                }
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isGrid.toggle()
+                    }) {
+                        Label("", systemImage: isGrid ? "rectangle.stack" : "circle.grid.2x2" )
+                    }
+                    Button(action: {
+                        isGrid.toggle()
+                    }) {
+                        Label("", systemImage: "plus" )
+                    }
+                }
+            }
         }
+
     }
 }
 
