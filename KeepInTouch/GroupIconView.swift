@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct GroupIconView: View {
-    @State private var group: [Group] = Sample.sampleData
+    let group: [Person] = Sample.sampleData
     let title: String
     let theme: ColorTheme
     
     var body: some View {
-        VStack {
-            Circle()
-                .strokeBorder(theme.accentColor, lineWidth: 5)
-                .background(Circle().foregroundColor(theme.mainColor))
-//                .frame(width: 150)
-                .shadow(radius: 10, y: 5)
-                .overlay {
-                    Text(title)
-                        .font(.title)
-                        .foregroundColor(theme.accentColor)
+            GeometryReader { geometry in
+                NavigationLink(destination: , label: <#T##() -> _#>) {
+                    Circle()
+                        .strokeBorder(theme.accentColor, lineWidth: geometry.size.width * 0.02)
+                        .background(Circle().foregroundColor(theme.mainColor))
+        //                .frame(width: 150)
+                        .shadow(color: theme.accentColor, radius: geometry.size.width * 0.03, y: 0)
+                        .overlay {
+                            Text(title)
+                                .font(.title)
+                                .foregroundColor(theme.accentColor)
+                    }
                 }
-        }
-        .padding()
+            }
+
+
     }
 }
 

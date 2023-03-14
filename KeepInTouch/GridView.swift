@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    let groups = Sample.sampleData
+    let groups = Sample.sampleGroups
     
     let columns = [
         GridItem(.flexible()),

@@ -10,7 +10,7 @@
 import Foundation
 
 struct Sample {
-    static let sampleData: [Group] = {
+    static let sampleData: [Person] = {
  
 
         let dateFormatter = DateFormatter()
@@ -21,28 +21,64 @@ struct Sample {
         let dob4 = dateFormatter.date(from: "1985-05-15")!
 
         let (meeting1, meeting2, event1, event2) = {
-            let meeting1 = Meeting(id: UUID(), date: Date())
-            let meeting2 = Meeting(id: UUID(), date: Date())
-            let event1 = Event(id: UUID(), title: "Birthday Party", date: Date())
-            let event2 = Event(id: UUID(), title: "Concert", date: Date())
+            let meeting1 = Person.Meeting(id: UUID(), date: Date())
+            let meeting2 = Person.Meeting(id: UUID(), date: Date())
+            let event1 = Person.Event(id: UUID(), title: "Birthday Party", date: Date())
+            let event2 = Person.Event(id: UUID(), title: "Concert", date: Date())
             return (meeting1, meeting2, event1, event2)
         }()
 
-        let peopleWithMeeting = [            Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
+        let peopleWithMeeting = [Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
             Person(id: UUID(), firstName: "Bob", lastName: "Smith", birthday: dob2, meetings: [meeting1], events: [event2]),
             Person(id: UUID(), firstName: "Charlie", lastName: "Brown", birthday: dob3, meetings: [meeting1], events: []),
             Person(id: UUID(), firstName: "Diana", lastName: "Lee", birthday: dob4, meetings: [meeting1], events: [event1, event2])
         ]
 
-        let peopleWithEvent = [            Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
+        let peopleWithEvent = [Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
             Person(id: UUID(), firstName: "Bob", lastName: "Smith", birthday: dob2, meetings: [meeting2], events: [event2]),
             Person(id: UUID(), firstName: "Charlie", lastName: "Brown", birthday: dob3,  meetings: [], events: [])
         ]
-        let group1 = Group(id: UUID(), title: "Family", persons: peopleWithEvent , colorTheme: ColorTheme.bubblegum)
-        let group2 = Group(id: UUID(), title: "Friends", persons: peopleWithMeeting, colorTheme: ColorTheme.buttercup)
-        let group3 = Group(id: UUID(), title: "Work", persons: peopleWithMeeting, colorTheme: ColorTheme.orange)
+        let group1 = Person.Group(id: UUID(), title: "Family", persons: peopleWithEvent , colorTheme: ColorTheme.bubblegum)
+        let group2 = Person.Group(id: UUID(), title: "Friends", persons: peopleWithMeeting, colorTheme: ColorTheme.buttercup)
+        let group3 = Person.Group(id: UUID(), title: "Work", persons: peopleWithMeeting, colorTheme: ColorTheme.orange)
 
-        return [ group1, group2, group3 ]
+//        return [ group1, group2, group3, group1 ]
+        return peopleWithEvent
+    }()
+    
+    static let sampleGroups: [Person.Group] = {
+ 
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dob1 = dateFormatter.date(from: "1995-02-12")!
+        let dob2 = dateFormatter.date(from: "1988-08-28")!
+        let dob3 = dateFormatter.date(from: "1990-11-01")!
+        let dob4 = dateFormatter.date(from: "1985-05-15")!
+
+        let (meeting1, meeting2, event1, event2) = {
+            let meeting1 = Person.Meeting(id: UUID(), date: Date())
+            let meeting2 = Person.Meeting(id: UUID(), date: Date())
+            let event1 = Person.Event(id: UUID(), title: "Birthday Party", date: Date())
+            let event2 = Person.Event(id: UUID(), title: "Concert", date: Date())
+            return (meeting1, meeting2, event1, event2)
+        }()
+
+        let peopleWithMeeting = [Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
+            Person(id: UUID(), firstName: "Bob", lastName: "Smith", birthday: dob2, meetings: [meeting1], events: [event2]),
+            Person(id: UUID(), firstName: "Charlie", lastName: "Brown", birthday: dob3, meetings: [meeting1], events: []),
+            Person(id: UUID(), firstName: "Diana", lastName: "Lee", birthday: dob4, meetings: [meeting1], events: [event1, event2])
+        ]
+
+        let peopleWithEvent = [Person(id: UUID(), firstName: "Alice", lastName: "Jones", birthday: dob1, meetings: [meeting1], events: [event1]),
+            Person(id: UUID(), firstName: "Bob", lastName: "Smith", birthday: dob2, meetings: [meeting2], events: [event2]),
+            Person(id: UUID(), firstName: "Charlie", lastName: "Brown", birthday: dob3,  meetings: [], events: [])
+        ]
+        let group1 = Person.Group(id: UUID(), title: "Family", persons: peopleWithEvent , colorTheme: ColorTheme.bubblegum)
+        let group2 = Person.Group(id: UUID(), title: "Friends", persons: peopleWithMeeting, colorTheme: ColorTheme.buttercup)
+        let group3 = Person.Group(id: UUID(), title: "Work", persons: peopleWithMeeting, colorTheme: ColorTheme.orange)
+
+        return [ group1, group2, group3, group1 ]
     }()
 }
 

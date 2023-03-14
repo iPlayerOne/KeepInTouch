@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Identifiable, Decodable {
+struct Person: Identifiable, Codable {
     let id: UUID
     var firstName: String
     var lastName: String
@@ -16,7 +16,7 @@ struct Person: Identifiable, Decodable {
     var events: [Event]
     
     var fullName: String {
-        firstName + lastName
+        firstName + " " + lastName
     }
     
     lazy var dateFormatter: DateFormatter = {
@@ -35,21 +35,63 @@ struct Person: Identifiable, Decodable {
     }
 }
 
-struct Group: Identifiable, Decodable {
-    let id: UUID
-    var title: String
-    var persons: [Person]
-    var colorTheme: ColorTheme
+extension Person {
+    
+    struct Group: Identifiable, Codable {
+        let id: UUID
+        var title: String
+        var persons: [Person]
+        var colorTheme: ColorTheme
+    }
+    
+    struct Meeting: Identifiable, Codable {
+        let id: UUID
+        var date: Date
+    }
+    
+    struct Event: Identifiable, Codable {
+        let id: UUID
+        var title: String
+        var date: Date
+    }
+    
+    struct Data {
+        var firstName: String = ""
+        var lastName: String = ""
+        var birthday: Date = Date()
+        var meetings:[Meeting] = []
+        var events: [Event] = []
+    }
+    
+    var data: Data {
+        Data(
+            firstName: firstName,
+            lastName: lastName,
+            birthday: birthday,
+            meetings: meetings,
+            events: events
+        )
+    }
+    
+    mutating func update(from data: Data) {
+        firstName = data.firstName
+        lastName = data.lastName
+        birthday = data.birthday
+        meetings = data.meetings
+        events = data.events
+    }
+    
+    init(data: Data) {
+        id = UUID()
+        firstName = data.firstName
+        lastName = data.lastName
+        birthday = data.birthday
+        meetings = data.meetings
+        events = data.events
+    }
+
 }
 
-struct Meeting: Identifiable, Decodable {
-    let id: UUID
-    var date: Date
-}
 
-struct Event: Identifiable, Decodable {
-    let id: UUID
-    var title: String
-    var date: Date
-}
+
 
