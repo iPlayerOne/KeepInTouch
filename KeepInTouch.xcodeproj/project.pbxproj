@@ -7,13 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		301BB41F29AE367500F85821 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BB41E29AE367500F85821 /* StorageManager.swift */; };
+		301764E82A55B7E10028D2D3 /* CoreDataExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301764E72A55B7E10028D2D3 /* CoreDataExtentions.swift */; };
+		301C66192A7D463B008BB019 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301C66182A7D463B008BB019 /* GroupDetailView.swift */; };
+		302E19912A6AC3B500931F32 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E19902A6AC3B500931F32 /* Groups.swift */; };
+		30711AD12AC4557A008F3E10 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711AD02AC4557A008F3E10 /* NotificationController.swift */; };
+		30711AD42AC475C0008F3E10 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711AD32AC475C0008F3E10 /* DateFormatterHelper.swift */; };
+		30711AD72AC5D3E2008F3E10 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711AD62AC5D3E1008F3E10 /* EventsView.swift */; };
+		30711AD92AC5D60A008F3E10 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711AD82AC5D60A008F3E10 /* Event.swift */; };
+		30711ADB2AC5D755008F3E10 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711ADA2AC5D755008F3E10 /* EventRowView.swift */; };
+		30711ADD2AC6CD68008F3E10 /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711ADC2AC6CD68008F3E10 /* Date+Extentions.swift */; };
+		30711ADF2AC993B7008F3E10 /* EventsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711ADE2AC993B7008F3E10 /* EventsMainView.swift */; };
+		30711AE22AC9E48E008F3E10 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30711AE12AC9E48E008F3E10 /* ButtonView.swift */; };
+		30919C632AA0AF2300B0E753 /* GroupAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30919C622AA0AF2300B0E753 /* GroupAddView.swift */; };
+		3095EEB92AADD2590063ED97 /* TempPersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095EEB82AADD2590063ED97 /* TempPersonListView.swift */; };
+		3095EEBB2AB0C08A0063ED97 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095EEBA2AB0C08A0063ED97 /* Popup.swift */; };
+		30B1CD5F2AC0AA8300CA8180 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1CD5E2AC0AA8300CA8180 /* ViewMode.swift */; };
+		30CF23972AA632E300BAD4E0 /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF23962AA632E300BAD4E0 /* PersonAddView.swift */; };
+		30CF23992AA8A04400BAD4E0 /* DataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF23982AA8A04400BAD4E0 /* DataOperation.swift */; };
 		30D9031829ABB880000FEFAC /* PersonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D9031729ABB880000FEFAC /* PersonCellView.swift */; };
 		30DFD4A9299270F7001D2F80 /* KeepInTouchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */; };
 		30DFD4AB299270F7001D2F80 /* GroupIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD4AA299270F7001D2F80 /* GroupIconView.swift */; };
 		30DFD4AD299270F9001D2F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DFD4AC299270F9001D2F80 /* Assets.xcassets */; };
 		30DFD4B0299270F9001D2F80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DFD4AF299270F9001D2F80 /* Preview Assets.xcassets */; };
 		30E9C97429BB5BF200A6E22C /* PersonEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C97329BB5BF200A6E22C /* PersonEditView.swift */; };
+		30E9C97F29C1F21500A6E22C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C97E29C1F21500A6E22C /* PersistenceController.swift */; };
+		30E9C98129C2314D00A6E22C /* GroupEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C98029C2314D00A6E22C /* GroupEditView.swift */; };
+		30E9C98329C231B700A6E22C /* GroupThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C98229C231B700A6E22C /* GroupThemePicker.swift */; };
+		30E9C98529C2328300A6E22C /* GroupThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C98429C2328300A6E22C /* GroupThemeView.swift */; };
+		30E9C98829C8EFFF00A6E22C /* GroupPersonModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30E9C98629C8EFFE00A6E22C /* GroupPersonModel.xcdatamodeld */; };
 		30EF283F29A3FE9200294159 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF283E29A3FE9200294159 /* Person.swift */; };
 		30EF284429A400A800294159 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284329A400A800294159 /* ColorTheme.swift */; };
 		30EF284629A5047700294159 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284529A5047700294159 /* Sample.swift */; };
@@ -23,10 +44,27 @@
 		30EF284E29A7C21A00294159 /* EventFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284D29A7C21A00294159 /* EventFooterView.swift */; };
 		30EF285029A7D55400294159 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF284F29A7D55400294159 /* PersonListView.swift */; };
 		30EF285229A8CE2E00294159 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF285129A8CE2E00294159 /* PersonDetailView.swift */; };
+		30F6C09E2AAC846900597DB3 /* TempGroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6C09D2AAC846900597DB3 /* TempGroupListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		301BB41E29AE367500F85821 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		301764E72A55B7E10028D2D3 /* CoreDataExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExtentions.swift; sourceTree = "<group>"; };
+		301C66182A7D463B008BB019 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		302E19902A6AC3B500931F32 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		30711AD02AC4557A008F3E10 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		30711AD32AC475C0008F3E10 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
+		30711AD62AC5D3E1008F3E10 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		30711AD82AC5D60A008F3E10 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		30711ADA2AC5D755008F3E10 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
+		30711ADC2AC6CD68008F3E10 /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
+		30711ADE2AC993B7008F3E10 /* EventsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMainView.swift; sourceTree = "<group>"; };
+		30711AE12AC9E48E008F3E10 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		30919C622AA0AF2300B0E753 /* GroupAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddView.swift; sourceTree = "<group>"; };
+		3095EEB82AADD2590063ED97 /* TempPersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempPersonListView.swift; sourceTree = "<group>"; };
+		3095EEBA2AB0C08A0063ED97 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		30B1CD5E2AC0AA8300CA8180 /* ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMode.swift; sourceTree = "<group>"; };
+		30CF23962AA632E300BAD4E0 /* PersonAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
+		30CF23982AA8A04400BAD4E0 /* DataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOperation.swift; sourceTree = "<group>"; };
 		30D9031729ABB880000FEFAC /* PersonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellView.swift; sourceTree = "<group>"; };
 		30DFD4A5299270F7001D2F80 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepInTouchApp.swift; sourceTree = "<group>"; };
@@ -34,6 +72,11 @@
 		30DFD4AC299270F9001D2F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30DFD4AF299270F9001D2F80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30E9C97329BB5BF200A6E22C /* PersonEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEditView.swift; sourceTree = "<group>"; };
+		30E9C97E29C1F21500A6E22C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		30E9C98029C2314D00A6E22C /* GroupEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditView.swift; sourceTree = "<group>"; };
+		30E9C98229C231B700A6E22C /* GroupThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupThemePicker.swift; sourceTree = "<group>"; };
+		30E9C98429C2328300A6E22C /* GroupThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupThemeView.swift; sourceTree = "<group>"; };
+		30E9C98729C8EFFF00A6E22C /* KeepInTouchModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeepInTouchModel.xcdatamodel; sourceTree = "<group>"; };
 		30EF283E29A3FE9200294159 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		30EF284329A400A800294159 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		30EF284529A5047700294159 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
@@ -43,6 +86,7 @@
 		30EF284D29A7C21A00294159 /* EventFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFooterView.swift; sourceTree = "<group>"; };
 		30EF284F29A7D55400294159 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
 		30EF285129A8CE2E00294159 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+		30F6C09D2AAC846900597DB3 /* TempGroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempGroupListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +103,67 @@
 		301BB41D29AE361C00F85821 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				301BB41E29AE367500F85821 /* StorageManager.swift */,
+				30E9C97E29C1F21500A6E22C /* PersistenceController.swift */,
+				30CF23982AA8A04400BAD4E0 /* DataOperation.swift */,
+				30B1CD5E2AC0AA8300CA8180 /* ViewMode.swift */,
+				30711AD02AC4557A008F3E10 /* NotificationController.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		30711AD22AC47580008F3E10 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30711AD32AC475C0008F3E10 /* DateFormatterHelper.swift */,
+				30711ADC2AC6CD68008F3E10 /* Date+Extentions.swift */,
+				3095EEBA2AB0C08A0063ED97 /* Popup.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30711AD52AC5D3B3008F3E10 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				30711ADE2AC993B7008F3E10 /* EventsMainView.swift */,
+				30711AD62AC5D3E1008F3E10 /* EventsView.swift */,
+				30711ADA2AC5D755008F3E10 /* EventRowView.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		30711AE02AC9E42F008F3E10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30711AE12AC9E48E008F3E10 /* ButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30C25E252A96327C00859AC0 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				30E9C98029C2314D00A6E22C /* GroupEditView.swift */,
+				301C66182A7D463B008BB019 /* GroupDetailView.swift */,
+				30DFD4AA299270F7001D2F80 /* GroupIconView.swift */,
+				30E9C98229C231B700A6E22C /* GroupThemePicker.swift */,
+				30E9C98429C2328300A6E22C /* GroupThemeView.swift */,
+				30919C622AA0AF2300B0E753 /* GroupAddView.swift */,
+				30F6C09D2AAC846900597DB3 /* TempGroupListView.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		30C25E262A9632AF00859AC0 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				30CF23962AA632E300BAD4E0 /* PersonAddView.swift */,
+				30EF284F29A7D55400294159 /* PersonListView.swift */,
+				30D9031729ABB880000FEFAC /* PersonCellView.swift */,
+				30EF285129A8CE2E00294159 /* PersonDetailView.swift */,
+				30E9C97329BB5BF200A6E22C /* PersonEditView.swift */,
+				3095EEB82AADD2590063ED97 /* TempPersonListView.swift */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 		30DFD49C299270F7001D2F80 = {
@@ -83,18 +185,18 @@
 		30DFD4A7299270F7001D2F80 /* KeepInTouch */ = {
 			isa = PBXGroup;
 			children = (
+				30711AD22AC47580008F3E10 /* Helpers */,
 				301BB41D29AE361C00F85821 /* Services */,
 				30EF284029A3FE9800294159 /* Models */,
 				30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */,
 				30EF284729A5076000294159 /* StarterView.swift */,
 				30EF284929A5078500294159 /* CarouselView.swift */,
 				30EF284B29A507AA00294159 /* GridView.swift */,
-				30EF284F29A7D55400294159 /* PersonListView.swift */,
-				30D9031729ABB880000FEFAC /* PersonCellView.swift */,
-				30EF285129A8CE2E00294159 /* PersonDetailView.swift */,
-				30E9C97329BB5BF200A6E22C /* PersonEditView.swift */,
+				30C25E252A96327C00859AC0 /* Group */,
+				30C25E262A9632AF00859AC0 /* Person */,
+				30711AD52AC5D3B3008F3E10 /* Event */,
+				30711AE02AC9E42F008F3E10 /* Views */,
 				30EF284D29A7C21A00294159 /* EventFooterView.swift */,
-				30DFD4AA299270F7001D2F80 /* GroupIconView.swift */,
 				30DFD4AC299270F9001D2F80 /* Assets.xcassets */,
 				30DFD4AE299270F9001D2F80 /* Preview Content */,
 				30EF284529A5047700294159 /* Sample.swift */,
@@ -114,7 +216,11 @@
 			isa = PBXGroup;
 			children = (
 				30EF283E29A3FE9200294159 /* Person.swift */,
+				30711AD82AC5D60A008F3E10 /* Event.swift */,
+				302E19902A6AC3B500931F32 /* Groups.swift */,
 				30EF284329A400A800294159 /* ColorTheme.swift */,
+				301764E72A55B7E10028D2D3 /* CoreDataExtentions.swift */,
+				30E9C98629C8EFFE00A6E22C /* GroupPersonModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,20 +295,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E9C98529C2328300A6E22C /* GroupThemeView.swift in Sources */,
 				30EF284829A5076000294159 /* StarterView.swift in Sources */,
 				30EF283F29A3FE9200294159 /* Person.swift in Sources */,
+				302E19912A6AC3B500931F32 /* Groups.swift in Sources */,
 				30EF284629A5047700294159 /* Sample.swift in Sources */,
-				301BB41F29AE367500F85821 /* StorageManager.swift in Sources */,
+				30B1CD5F2AC0AA8300CA8180 /* ViewMode.swift in Sources */,
+				30711AD42AC475C0008F3E10 /* DateFormatterHelper.swift in Sources */,
+				30711AE22AC9E48E008F3E10 /* ButtonView.swift in Sources */,
+				30711ADF2AC993B7008F3E10 /* EventsMainView.swift in Sources */,
+				30E9C98329C231B700A6E22C /* GroupThemePicker.swift in Sources */,
+				30711AD92AC5D60A008F3E10 /* Event.swift in Sources */,
+				30711ADB2AC5D755008F3E10 /* EventRowView.swift in Sources */,
+				30E9C98129C2314D00A6E22C /* GroupEditView.swift in Sources */,
+				3095EEB92AADD2590063ED97 /* TempPersonListView.swift in Sources */,
 				30EF284429A400A800294159 /* ColorTheme.swift in Sources */,
+				30919C632AA0AF2300B0E753 /* GroupAddView.swift in Sources */,
+				30F6C09E2AAC846900597DB3 /* TempGroupListView.swift in Sources */,
+				30711AD72AC5D3E2008F3E10 /* EventsView.swift in Sources */,
+				30CF23992AA8A04400BAD4E0 /* DataOperation.swift in Sources */,
+				30711AD12AC4557A008F3E10 /* NotificationController.swift in Sources */,
 				30DFD4AB299270F7001D2F80 /* GroupIconView.swift in Sources */,
 				30DFD4A9299270F7001D2F80 /* KeepInTouchApp.swift in Sources */,
 				30E9C97429BB5BF200A6E22C /* PersonEditView.swift in Sources */,
 				30EF284A29A5078500294159 /* CarouselView.swift in Sources */,
+				30711ADD2AC6CD68008F3E10 /* Date+Extentions.swift in Sources */,
+				3095EEBB2AB0C08A0063ED97 /* Popup.swift in Sources */,
+				30CF23972AA632E300BAD4E0 /* PersonAddView.swift in Sources */,
+				30E9C98829C8EFFF00A6E22C /* GroupPersonModel.xcdatamodeld in Sources */,
 				30EF284C29A507AA00294159 /* GridView.swift in Sources */,
 				30EF284E29A7C21A00294159 /* EventFooterView.swift in Sources */,
 				30EF285029A7D55400294159 /* PersonListView.swift in Sources */,
 				30D9031829ABB880000FEFAC /* PersonCellView.swift in Sources */,
+				301C66192A7D463B008BB019 /* GroupDetailView.swift in Sources */,
 				30EF285229A8CE2E00294159 /* PersonDetailView.swift in Sources */,
+				30E9C97F29C1F21500A6E22C /* PersistenceController.swift in Sources */,
+				301764E82A55B7E10028D2D3 /* CoreDataExtentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -313,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -409,6 +537,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30E9C98629C8EFFE00A6E22C /* GroupPersonModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30E9C98729C8EFFF00A6E22C /* KeepInTouchModel.xcdatamodel */,
+			);
+			currentVersion = 30E9C98729C8EFFF00A6E22C /* KeepInTouchModel.xcdatamodel */;
+			path = GroupPersonModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30DFD49D299270F7001D2F80 /* Project object */;
 }

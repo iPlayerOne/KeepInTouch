@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GroupIconView: View {
-    let group: [Person] = Sample.sampleData
+//    let group: [Person] = Sample.sampleData
     let title: String
     let theme: ColorTheme
     

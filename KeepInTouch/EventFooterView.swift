@@ -31,11 +31,11 @@ struct EventFooterView: View {
                 .background(Color.clear)
             .opacity(0.4)
             .overlay {
-                HStack {
-                    Label("Some name", image: "person")
-                    Spacer()
-                    Label("Some date", image: "date")
-                }
+//                HStack {
+//                    Label("Some name")
+//                    Spacer()
+//                    Label("Some date")
+//                }
         
             }
         }

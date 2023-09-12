@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-enum ColorTheme: String, CaseIterable, Identifiable, Codable {
-    case bubblegum
-    case buttercup
-    case indigo
-    case lavender
-    case magenta
-    case navy
-    case orange
-    case oxblood
-    case periwinkle
-    case poppy
-    case purple
-    case seafoam
-    case sky
-    case tan
-    case teal
-    case yellow
+public enum ColorTheme: Int16, CaseIterable, Identifiable, Codable {
+    case bubblegum = 0
+    case buttercup = 1
+    case indigo = 2
+    case lavender = 3
+    case magenta = 4
+    case navy = 5
+    case orange = 6
+    case oxblood = 7
+    case periwinkle = 8
+    case poppy = 9
+    case purple = 10
+    case seafoam = 11
+    case sky = 12
+    case tan = 13
+    case teal = 14
+    case yellow = 15
     
     var accentColor: Color {
         switch self {
@@ -32,16 +32,24 @@ enum ColorTheme: String, CaseIterable, Identifiable, Codable {
         }
     }
     
+    
+//    func mainColor(forRawValue rawValue: Int16) {
+//        Color(name)
+//    }
     var mainColor: Color {
-        Color(rawValue)
+        Color(self.name.lowercased())
     }
-    
+
     var name: String {
-        rawValue.capitalized
+        String(describing: self)
     }
     
-    var id: String {
+    public var id: String {
         name
+    }
+    
+    var nsManagedTheme: Int16 {
+        self.rawValue
     }
 }
     
