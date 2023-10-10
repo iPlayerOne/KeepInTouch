@@ -19,6 +19,16 @@ extension Event {
         set { date_ = newValue }
     }
     
+    var category: String {
+        get { category_ ?? "No category" }
+        set { category_ = newValue }
+    }
+    
+    var note: String {
+        get { note_ ?? ""}
+        set { note_ = newValue }
+    }
+    
     var personsArray: [Person] {
         let set = persons as? Set<Person> ?? []
         return Array(set)

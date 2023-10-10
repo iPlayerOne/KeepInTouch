@@ -26,20 +26,20 @@ struct StarterView: View {
 //                    TempPersonListView()
 //                }
                 TabView(selection: $selectedView) {
-                    TempGroupListView()
-                        .tag(0)
-                        .tabItem {
-                            Image(systemName: "person.2.crop.square.stack")
-                            Text("Groups")
-                        }
+//                    TempGroupListView()
+//                        .tag(0)
+//                        .tabItem {
+//                            Image(systemName: "person.2.crop.square.stack")
+//                            Text("Groups")
+//                        }
                     EventsMainView()
-                        .tag(1)
+                        .tag(0)
                         .tabItem {
                             Image(systemName: "calendar")
                             Text("Events")
                         }
-                    TempPersonListView(viewMode: .navigation)
-                        .tag(2)
+                    PersonListView(viewMode: .navigation)
+                        .tag(1)
                         .tabItem {
                             Image(systemName: "person.crop.rectangle.stack")
                             Text("Persons")

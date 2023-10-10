@@ -17,7 +17,7 @@ struct PersonAddView: View {
         //Use group because swift won't let us
         Group {
             if let person = newPerson {
-                PersonEditView(person: person, isEdit: false)
+                PersonAddEditView(person: person, isEdit: false)
             } else {
                 ProgressView()
                     .onAppear {

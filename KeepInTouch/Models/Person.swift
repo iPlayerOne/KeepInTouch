@@ -26,6 +26,16 @@ extension Person {
         set { birthday_ = newValue }
     }
     
+    var phoneNumber: String {
+        get { phoneNumber_ ?? "" }
+        set { phoneNumber_ = newValue }
+    }
+    
+    var email: String {
+        get { email_ ?? "" }
+        set { email_ = newValue }
+    }
+    
     var fullName: String {
         return "\(firstName_ ?? "Full") \(lastName_ ?? "Name")"
     }

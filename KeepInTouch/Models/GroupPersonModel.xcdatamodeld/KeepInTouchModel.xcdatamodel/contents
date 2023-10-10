@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Event" representedClassName="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="category_" optional="YES" attributeType="String"/>
         <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="note_" optional="YES" attributeType="String"/>
         <attribute name="title_" optional="YES" attributeType="String"/>
         <relationship name="persons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="event" inverseEntity="Person"/>
     </entity>
@@ -18,9 +20,11 @@
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
         <attribute name="birthday_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email_" optional="YES" attributeType="String"/>
         <attribute name="firstName_" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lastName_" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="persons" inverseEntity="Event"/>
         <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Groups" inverseName="persons" inverseEntity="Groups"/>
     </entity>

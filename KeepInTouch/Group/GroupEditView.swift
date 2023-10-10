@@ -90,7 +90,7 @@ struct GroupEditView: View {
             .navigationBarTitle(isEdit ? "Edit Group" : "Create Group")
         }
         .popupNavigationView(isPresented: $isPopup, horizontalPadding: 40, verticalPadding: 200, cornerRadius: 15) {
-            TempPersonListView(viewMode: .selection, selectedPersons: $selectedPersons)
+            PersonListView(viewMode: .selection, selectedPersons: $selectedPersons)
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         Image(systemName: "xmark")

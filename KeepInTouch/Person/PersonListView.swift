@@ -1,99 +1,153 @@
 //
-//  PersonListView.swift
+//  TempPersonListView.swift
 //  KeepInTouch
 //
-//  Created by ikorobov on 23.02.2023.
+//  Created by ikorobov on 10.09.2023.
 //
 
 import SwiftUI
 
 struct PersonListView: View {
     
-    @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var viewContext
+    @FetchRequest(entity: Person.entity(), sortDescriptors: [NSSortDescriptor(key: "firstName_", ascending: true)])
+    private var persons: FetchedResults<Person>
     
-    @FetchRequest(entity: Person.entity(), sortDescriptors: [NSSortDescriptor(key: "lastName_", ascending: true)])
-    private var allPersons: FetchedResults<Person>
-    @State var isGrouped: Bool
-    @ObservedObject var group: Groups
+    @Binding var selectedPersons: [Person]
+    @State private var createOperation: CreateOperation<Person>?
+    @State private var isAddPersonShow: Bool = false
+    @State private var viewMode: ViewMode
+    @State private var searchText: String = ""
+//    var query: Binding<String> {
+//        Binding {
+//            searchText
+//        } set: { newValue in
+//            searchText = newValue
+//            persons.nsPredicate = newValue.isEmpty
+//            ? nil
+//            : NSPredicate(format: "place CONTAINS %@", newValue)
+//        }
+//    }
+    
+    init(viewMode: ViewMode = .navigation, selectedPersons: Binding<[Person]> = .constant([])) {
+        _viewMode = State(initialValue: viewMode)
+        _selectedPersons = selectedPersons
+    }
     
     
     var body: some View {
-        VStack {
-            if isGrouped {
-                GroupIconView(
-                    title: group.title,
-                    theme: ColorTheme(
-                        rawValue: (group.colorTheme).rawValue) ?? ColorTheme.magenta
-                )
-                .frame(maxHeight: 250)
-                .padding()
-                
-                EventFooterView()
+        ZStack {
+//            VStack {
+                TextField("Search", text: $searchText)
                     .padding()
-                ScrollView {
-                    LazyVStack {
-                        if let persons = group.persons?.allObjects as? [Person] {
-                            ForEach(persons) { person in
-//                                PersonCellView(
-//                                    title: "\(person.zfirstName.first ?? "I")" + "\(person.lastName.first ?? "K")",
-//                                    name: person.fullName,
-//                                    theme: ColorTheme.allCases.randomElement() ?? ColorTheme.indigo)
-                                Divider()
-                            }
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .padding(.horizontal)
+                List {
+                    
+                    ForEach(persons) { person in
+                        let isSelected = selectedPersons.contains { $0.id == person.id}
+                        
+                        if viewMode == .navigation {
+                            PersonCellView(person: person, isSelected: isSelected, toggleSelection: { _ in}, viewMode: viewMode)
+                                .swipeActions {
+                                    Button(role: .destructive) {
+                                        deletePerson(person)
+                                    } label: {
+                                        Label("Delete",systemImage: "trash")
+                                    }
+
+                                }
+                        } else {
+                            PersonCellView(person: person, isSelected: isSelected, toggleSelection: { selectedPerson in
+                                handlePersonSelection(selectedPerson)
+                            }, viewMode: viewMode)
                         }
                     }
-                    .padding()
                 }
-                .padding(.top)
-                .background(Color.mint)
-                .navigationBarTitle("Friends")
-            } else {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(allPersons) { person in
-//                            PersonCellView(
-//                                title: "\(person.firstName.first ?? "I")" + "\(person.lastName.first ?? "K")",
-//                                name: person.fullName,
-//                                theme: ColorTheme.indigo)
-                            Divider()
+                .onChange(of: searchText) { newValue in
+                            persons.nsPredicate = newValue.isEmpty ? nil : NSPredicate(format: "firstName_ CONTAINS %@ OR lastName_ CONTAINS %@ ", newValue, newValue)
                         }
+            
+//            }
+            if viewMode == .navigation {
+                
+                VStack {
+                    TextField("Search", text: $searchText)
+                        .padding()
+                        .background(Color(.white))
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                        .opacity(0.8)
+                    Spacer()
+                    HStack {
+                        ButtonView(action: deleteAllPerson, imageString: "minus.square.fill", color: .red)
+                            .padding()
+                        Spacer()
+                        ButtonView(action: PersistenceController.shared.createMockPerson, imageString: "plus.app.fill", color: .gray)
+                            .padding()
+                        ButtonView(action: addPerson, imageString: "plus.circle.fill", color: .blue)
                     }
                     .padding()
                 }
             }
         }
+        .navigationTitle("Persons")
+        .navigationBarTitleDisplayMode(.large)
+        .sheet(item: $createOperation) { createOperation in
+            NavigationView {
+                PersonAddEditView(person: createOperation.childObject, isEdit: false)
+                    .environment(\.managedObjectContext, createOperation.childContext)
+            }
+        }
+    }
+    
+    private func addPerson() {
+        isAddPersonShow = true
+        createOperation = CreateOperation(with: viewContext)
+    }
+    
+    private func deletePerson(_ person: Person ) {
+        viewContext.delete(person)
+        viewContext.saveContext()
+    }
+    
+    private func deleteAllPerson() {
+        for person in persons {
+            viewContext.delete(person)
+        }
+        viewContext.saveContext()
+        
+    }
+    
+    private func toggleSelectedPerson(_ person: Person) {
+        if let index = selectedPersons.firstIndex(where: { $0.id == person.id }) {
+            selectedPersons.remove(at: index)
+        } else {
+            selectedPersons.append(person)
+        }
+    }
+    
+    private func handlePersonSelection(_ person: Person) {
+        toggleSelectedPerson(person)
     }
 }
 
-struct PersonListView_Previews: PreviewProvider {
+struct TempPersonListView_Previews: PreviewProvider {
     static var previews: some View {
-        
         let result = PersistenceController(inMemory: true)
         let viewContext = result.viewContext
+        let sample = Sample()
+        for _ in 0..<6 {
+            let newPerson = Person(context: viewContext)
+            newPerson.id = UUID()
+            newPerson.firstName = sample.firstNames.randomElement() ?? ""
+            newPerson.lastName = sample.lastNames.randomElement() ?? ""
+            newPerson.birthday = Date()
+        }
+        viewContext.saveContext()
         
-        
-        // Создаем тестовых Persons
-        let person1 = Person(context: viewContext)
-        person1.firstName = "John"
-        person1.lastName = "Doe"
-        
-        let person2 = Person(context: viewContext)
-        person2.firstName = "Jane"
-        person2.lastName = "Smith"
-        
-        // Создаем тестовый Group
-        let newGroup = Groups(context: viewContext)
-        newGroup.id = UUID()
-        newGroup.title = "Friends Group"
-        newGroup.colorTheme = ColorTheme.bubblegum // Предположим, у вас есть соответствующий enum
-        
-        // Добавляем Persons в Group
-        newGroup.addToPersons(NSSet(array: [person1, person2]))
-        
-        // Возвращаем представление для превью с заданными тестовыми данными
-        return PersonListView(isGrouped: false, group: newGroup)
+        return PersonListView()
             .environment(\.managedObjectContext, viewContext)
     }
 }
-

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonEditView: View {
+struct PersonAddEditView: View {
     
     @Environment(\.managedObjectContext) private var childContext
     @Environment(\.presentationMode) var presentationMode
@@ -136,7 +136,7 @@ struct PersonEditView_Previews: PreviewProvider {
         let context = PersistenceController.shared.container.viewContext
         let newPerson = Person(context: context)
         
-        return PersonEditView(person: newPerson, isEdit: false)
+        return PersonAddEditView(person: newPerson, isEdit: false)
             .environment(\.managedObjectContext, context)
     }
 }

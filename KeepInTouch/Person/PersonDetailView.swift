@@ -35,7 +35,7 @@ struct PersonDetailView: View {
             }
         }
         .sheet(isPresented: $isEditing) {
-            PersonEditView(person: person, isEdit: true)
+            PersonAddEditView(person: person, isEdit: true)
         }
     }
 }
