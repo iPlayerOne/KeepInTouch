@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+struct  RoundButtonView: View {
     
     var action: () -> Void
     var imageString: String
@@ -24,5 +24,5 @@ struct ButtonView: View {
 }
 
 #Preview {
-    ButtonView(action: {}, imageString: "plus.circle.fill", color: .blue)
+     RoundButtonView(action: {}, imageString: "plus.circle.fill", color: .blue)
 }
