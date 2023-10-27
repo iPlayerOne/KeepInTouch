@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct GreetButtonView: View {
+    let activeColor = Color.red
+    let inactiveColor = Color.gray
+    
+    var isActive: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {}) {
+            Text("Greet")
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(isActive ? activeColor : inactiveColor)
+                .foregroundColor(.white)
+                .cornerRadius(15)
+        }
+        .disabled(!isActive)
     }
 }
 
 #Preview {
-    GreetButtonView()
+    GreetButtonView(isActive: false)
 }

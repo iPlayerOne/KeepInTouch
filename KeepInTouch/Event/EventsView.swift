@@ -41,12 +41,12 @@ struct EventsView: View {
             VStack {
                 Spacer()
                 HStack {
-                    ButtonView(action: deleteAllEvents, imageString: "minus.square.fill", color: .red)
+                     RoundButtonView(action: deleteAllEvents, imageString: "minus.square.fill", color: .red)
                         .padding()
                     Spacer()
-                    ButtonView(action: PersistenceController.shared.createMockEvent, imageString: "plus.app.fill", color: .gray)
+                     RoundButtonView(action: PersistenceController.shared.createMockEvent, imageString: "plus.app.fill", color: .gray)
                         .padding()
-                    ButtonView(action: {}, imageString: "plus.circle.fill", color: .blue)
+                     RoundButtonView(action: {}, imageString: "plus.circle.fill", color: .blue)
                     .padding()
                 }
             }
@@ -69,7 +69,7 @@ struct EventsView: View {
     for i in 0..<2 {
         let newEvent = Event(context: viewContext)
         newEvent.id = UUID()
-        newEvent.title = "Event\(i)"
+        newEvent.category = "Event\(i)"
         newEvent.date = Date()
         
         let person = Person(context: viewContext)
@@ -78,7 +78,7 @@ struct EventsView: View {
         person.firstName = sample.firstNames.randomElement() ?? "no name"
         person.lastName = sample.lastNames.randomElement() ?? "no surname"
         
-        person.addToEvent(newEvent)
+        person.addToEvents(newEvent)
     }
     
     try? viewContext.save()
@@ -86,7 +86,7 @@ struct EventsView: View {
     for i in 0..<2 {
         let newEvent = Event(context: viewContext)
         newEvent.id = UUID()
-        newEvent.title = "Event_\(i)"
+        newEvent.category = "Event_\(i)"
         newEvent.date = Date().randomDate()
         
         let person = Person(context: viewContext)
@@ -95,7 +95,7 @@ struct EventsView: View {
         person.firstName = sample.firstNames.randomElement() ?? "no name"
         person.lastName = sample.lastNames.randomElement() ?? "no surname"
         
-        person.addToEvent(newEvent)
+        person.addToEvents(newEvent)
     }
     
     try? viewContext.save()

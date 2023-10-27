@@ -51,11 +51,12 @@ struct PersonCellView_Previews: PreviewProvider {
         newPerson.firstName = sample.firstNames.randomElement() ?? ""
         newPerson.lastName = sample.lastNames.randomElement() ?? ""
         newPerson.birthday = Date()
-
+        
         viewContext.saveContext()
-
+        
         return  PersonCellView(person: newPerson, isSelected: true, toggleSelection: {_ in}, viewMode: .selection)
-            .environment(\.managedObjectContext, viewContext)    }
+            .environment(\.managedObjectContext, viewContext)
+    }
 }
 
 

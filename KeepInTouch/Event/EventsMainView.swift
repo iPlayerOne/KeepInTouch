@@ -23,7 +23,7 @@ struct EventsMainView: View {
     for _ in 0..<2 {
         let newEvent = Event(context: viewContext)
         newEvent.id = UUID()
-        newEvent.title = "Event"
+        newEvent.category = "Event"
         newEvent.date = Date()
         
         let person = Person(context: viewContext)
@@ -32,7 +32,7 @@ struct EventsMainView: View {
         person.firstName = sample.firstNames.randomElement() ?? "no name"
         person.lastName = sample.lastNames.randomElement() ?? "no surname"
         
-        person.addToEvent(newEvent)
+        person.addToEvents(newEvent)
         
         try? viewContext.save()
     }
@@ -40,7 +40,7 @@ struct EventsMainView: View {
     for i in 0..<2 {
         let newEvent = Event(context: viewContext)
         newEvent.id = UUID()
-        newEvent.title = "Event_\(i)"
+        newEvent.category = "Event_\(i)"
         newEvent.date = Date().randomDateUntilMonthEnds()
         
         let person = Person(context: viewContext)
@@ -49,7 +49,7 @@ struct EventsMainView: View {
         person.firstName = sample.firstNames.randomElement() ?? "no name"
         person.lastName = sample.lastNames.randomElement() ?? "no surname"
         
-        person.addToEvent(newEvent)
+        person.addToEvents(newEvent)
         
         try? viewContext.save()
     }

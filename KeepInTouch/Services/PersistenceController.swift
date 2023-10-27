@@ -130,7 +130,8 @@ class PersistenceController {
         let dates = [Date(), Date().randomDateUntilMonthEnds()]
         let newEvent = Event(context: viewContext)
         newEvent.id = UUID()
-        newEvent.title = "title"
+        newEvent.notificationID = UUID().uuidString
+        newEvent.category = "Birthday madness"
         newEvent.date = dates.randomElement()!
         
         let fetchPerson: NSFetchRequest<Person> = Person.fetchRequest()

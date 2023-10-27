@@ -37,7 +37,7 @@ struct PersonListView: View {
     
     var body: some View {
         ZStack {
-//            VStack {
+            VStack {
                 TextField("Search", text: $searchText)
                     .padding()
                     .background(Color(.systemGray6))
@@ -69,7 +69,7 @@ struct PersonListView: View {
                             persons.nsPredicate = newValue.isEmpty ? nil : NSPredicate(format: "firstName_ CONTAINS %@ OR lastName_ CONTAINS %@ ", newValue, newValue)
                         }
             
-//            }
+            }
             if viewMode == .navigation {
                 
                 VStack {
@@ -81,12 +81,12 @@ struct PersonListView: View {
                         .opacity(0.8)
                     Spacer()
                     HStack {
-                        ButtonView(action: deleteAllPerson, imageString: "minus.square.fill", color: .red)
+                         RoundButtonView(action: deleteAllPerson, imageString: "minus.square.fill", color: .red)
                             .padding()
                         Spacer()
-                        ButtonView(action: PersistenceController.shared.createMockPerson, imageString: "plus.app.fill", color: .gray)
+                         RoundButtonView(action: PersistenceController.shared.createMockPerson, imageString: "plus.app.fill", color: .gray)
                             .padding()
-                        ButtonView(action: addPerson, imageString: "plus.circle.fill", color: .blue)
+                         RoundButtonView(action: addPerson, imageString: "plus.circle.fill", color: .blue)
                     }
                     .padding()
                 }
@@ -94,7 +94,7 @@ struct PersonListView: View {
         }
         .navigationTitle("Persons")
         .navigationBarTitleDisplayMode(.large)
-        .sheet(item: $createOperation) { createOperation in
+        .fullScreenCover(item: $createOperation) { createOperation in
             NavigationView {
                 PersonAddEditView(person: createOperation.childObject, isEdit: false)
                     .environment(\.managedObjectContext, createOperation.childContext)

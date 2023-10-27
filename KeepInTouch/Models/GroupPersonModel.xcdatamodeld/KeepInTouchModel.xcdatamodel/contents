@@ -5,8 +5,8 @@
         <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note_" optional="YES" attributeType="String"/>
-        <attribute name="title_" optional="YES" attributeType="String"/>
-        <relationship name="persons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="event" inverseEntity="Person"/>
+        <attribute name="notificationID" attributeType="String"/>
+        <relationship name="persons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="events" inverseEntity="Person"/>
     </entity>
     <entity name="Groups" representedClassName="Groups" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -25,7 +25,7 @@
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="lastName_" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber_" optional="YES" attributeType="String"/>
-        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="persons" inverseEntity="Event"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="persons" inverseEntity="Event"/>
         <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Groups" inverseName="persons" inverseEntity="Groups"/>
     </entity>
 </model>

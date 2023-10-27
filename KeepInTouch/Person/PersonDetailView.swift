@@ -13,20 +13,27 @@ struct PersonDetailView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Group")) {
-                    //                    Text("\(person.groups?.allObjects[0].title ?? "Ungrouped")")
+            VStack(alignment: .leading, spacing: 10){
+                Text(person.fullName)
+                    .font(.largeTitle)
+                    .padding(.trailing, 15)
+                Spacer()
+                GreetButtonView(isActive: false)
+                    .padding()
+                ContactStackView(width: 40, height: 40)
+                Spacer()
+                List {
+                    Section(header: Text("Events")) {
+                        ForEach(person.eventsArray) { event in
+                            EventRowView(event: event)
+                        }
+                    }
                 }
-                
-                Section(header:Text("Pesonal data")) {
-                    Text("\(person.firstName)")
-                    Text("\(person.lastName)")
-                    Text(DateFormatterHelper.shared.format(person.birthday))
-                }
+
             }
         }
         .padding()
-        .navigationTitle("\(person.fullName)")
+        .navigationTitle("person detail")
         .toolbar {
             Button(action: {
                 isEditing = true

@@ -10,12 +10,16 @@ import SwiftUI
 struct EventCategoryMenuView: View {
     @ObservedObject var eventStorage = EventCategoryStorage()
     @State private var selectedCategory: EventCategory?
+    @Binding var showCustomCategoryTF: Bool
+    
     var body: some View {
         
         Menu {
+            // Попробовать через категори.айконнейм
             ForEach(eventStorage.categories) { category in
                 Button(action: {
                     selectedCategory = category
+                    showCustomCategoryTF = false
                 }) {
                     HStack {
                         Image(systemName: category.categoryIconName(for: category))
@@ -23,6 +27,16 @@ struct EventCategoryMenuView: View {
                     }
                 }
             }
+            Divider()
+            Button(action: {
+                showCustomCategoryTF.toggle()
+            }, label: {
+                HStack {
+                    Image(systemName: "plus.circle")
+                    Text("Other")
+                }
+            })
+            
         } label: {
             HStack {
                 if let selected = selectedCategory {
@@ -40,5 +54,5 @@ struct EventCategoryMenuView: View {
 }
 
 #Preview {
-    EventCategoryMenuView()
+    EventCategoryMenuView(showCustomCategoryTF: .constant(false))
 }

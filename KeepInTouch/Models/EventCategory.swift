@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct EventCategory: Codable, Identifiable {
+    var id = UUID().uuidString
+    var title: String
+    var iconName: String?
+}
+
+extension EventCategory {
+    static let example = EventCategory(title: "Birthday")
+}

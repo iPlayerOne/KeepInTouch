@@ -31,9 +31,9 @@ struct TempGroupListView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    ButtonView(action: PersistenceController.shared.createMockGroup, imageString: "plus.app.fill", color: .gray)
+                     RoundButtonView(action: PersistenceController.shared.createMockGroup, imageString: "plus.app.fill", color: .gray)
                         .padding()
-                    ButtonView(action: addGroup, imageString: "plus.circle.fill", color: .blue)
+                     RoundButtonView(action: addGroup, imageString: "plus.circle.fill", color: .blue)
                 }
                 .padding()
             }

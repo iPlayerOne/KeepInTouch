@@ -9,11 +9,6 @@ import Foundation
 
 extension Event {
     
-    var title: String {
-        get { title_ ?? "No title" }
-        set { title_ = newValue }
-    }
-    
     var date: Date {
         get { date_ ?? Date() }
         set { date_ = newValue }
@@ -33,4 +28,5 @@ extension Event {
         let set = persons as? Set<Person> ?? []
         return Array(set)
     }
+    
 }

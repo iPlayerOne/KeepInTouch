@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct NotificationSegmentPickerView: View {
+    
+    @State private var frenquency: NotificationFrequency = .onceADay
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Picker(selection: $frenquency, label: Text("Notification level")) {
+            ForEach(NotificationFrequency.allCases, id: \.self) { frenquency in
+                Text(frenquency.rawValue).tag(frenquency)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding()
     }
 }
 

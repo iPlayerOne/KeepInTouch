@@ -6,8 +6,23 @@
 //
 
 import SwiftUI
+import Contacts
 import ContactsUI
 
+
+// Requesting control
+class ContactService {
+    
+    private let contactStore = CNContactStore()
+    
+    func requestAccess(completion: @escaping (Bool) -> Void) {
+        contactStore.requestAccess(for: .contacts) { granted, error in
+            completion(granted)
+        }
+    }
+}
+
+// UI for picking contacts
 struct ContactPicker: UIViewControllerRepresentable {
     
     @Binding var selectedContact: CNContact?
@@ -16,6 +31,7 @@ struct ContactPicker: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> CNContactPickerViewController {
         let picker = CNContactPickerViewController()
         picker.delegate = context.coordinator
+//        picker.displayedPropertyKeys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactBirthdayKey]
         return picker
     }
     
@@ -33,7 +49,7 @@ struct ContactPicker: UIViewControllerRepresentable {
             self.parent = parent
         }
         
-        private func contactPicker(_ picker: CNContactPickerDelegate, didSelect contact: CNContact) {
+        func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
             parent.selectedContact = contact
             parent.presentationMode.wrappedValue.dismiss()
         }

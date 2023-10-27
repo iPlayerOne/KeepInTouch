@@ -39,6 +39,11 @@ extension Person {
     var fullName: String {
         return "\(firstName_ ?? "Full") \(lastName_ ?? "Name")"
     }
+    
+    var eventsArray: [Event] {
+        let set = events as? Set<Event> ?? []
+        return Array(set)
+    }
 }
 
 

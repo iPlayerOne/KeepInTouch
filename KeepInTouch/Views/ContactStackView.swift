@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ContactStackView: View {
+    let width: CGFloat
+    let height: CGFloat
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Divider()
+        HStack(spacing: 15) {
+            ContactButtonView(image: "phone.fill", color: .gray, text: "call", width: width, height: height)
+            ContactButtonView(image: "bubble.right.fill", color: .gray, text: "message", width: width, height: height)
+            ContactButtonView(image: "envelope.fill", color: .gray, text: "email", width: width, height: height)
+            ContactButtonView(image: "paperplane.fill", color: .gray, text: "telegram", width: width, height: height)
+        }
+        Divider()
     }
 }
 
 #Preview {
-    ContactStackView()
+    ContactStackView(width: 40, height: 40)
 }

@@ -15,9 +15,10 @@ struct EventRowView: View {
         VStack(alignment: .leading) {
             ForEach(event.personsArray) { person in
                 Text(person.fullName)
+                
             }
             HStack {
-                Text(event.title)
+                Text(event.category)
                 Spacer()
                 Text(event.date.formatted())
                     .font(.subheadline)
@@ -33,7 +34,7 @@ struct EventRowView: View {
     
     let event = Event(context: viewContext)
     event.id = UUID()
-    event.title = "Birthday"
+    event.category = "Birthday"
     event.date = Date().randomDate()
     
     let person = Person(context: viewContext)

@@ -12,15 +12,19 @@ class NotificationController {
     
     static let shared = NotificationController()
     
-    //Notification center for manage local notification
+    // Notification center for manage local notification
     
     private let center = UNUserNotificationCenter.current()
     
-    //private init for the sake of singlton
+    // Store identifier of scheduled notifications
+    
+    private var notificationID: [String] = []
+    
+    // private init for the sake of singlton
     
     private init() { }
     
-    //request permission
+    // request permission
     
     func requestPermission(completion: @escaping (Bool) -> Void) {
         center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
@@ -33,7 +37,7 @@ class NotificationController {
         }
     }
     
-    //Checking permissions
+    // Checking permissions
     func checkNotificationPermission(completion: @escaping (UNAuthorizationStatus) -> Void) {
         center.getNotificationSettings { settings in
             DispatchQueue.main.async {
@@ -42,9 +46,9 @@ class NotificationController {
         }
     }
     
-    //Notification time plannig
+    // Notification time plannig
     
-    func schelduleNotification(title: String, body: String, dateComponents: DateComponents) {
+    func schelduleNotification(identifier: String, title: String, body: String, dateComponents: DateComponents) {
         // new notification
         let content = UNMutableNotificationContent()
         content.title = title
@@ -55,7 +59,10 @@ class NotificationController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         //request creation
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+//        let identifier = UUID().uuidString
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationID.append(identifier)
         
         //Request adding
         center.add(request) { error in
@@ -64,6 +71,17 @@ class NotificationController {
             }
             
         }
+    }
+    //Delete specific notification
+    func clearSpecificNotification(identifier: String) {
+        var notificationID: [String] = []
+        notificationID.append(identifier)
+        center.removePendingNotificationRequests(withIdentifiers: notificationID)
+    }
+    //Delete all notifications
+    func clearAllNotification() {
+        center.removeAllPendingNotificationRequests()
+        notificationID.removeAll()
     }
     
 }
