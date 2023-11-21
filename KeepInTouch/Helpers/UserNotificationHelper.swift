@@ -13,7 +13,7 @@ enum NotificationFrequency: String, CaseIterable {
     case everyFewHours = "Nightmare"
 }
 
-struct NotificationHelper {
+struct UserNotificationHelper {
     
     private var notificationController = NotificationController.shared
     
