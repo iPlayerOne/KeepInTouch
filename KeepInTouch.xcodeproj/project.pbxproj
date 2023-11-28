@@ -24,6 +24,8 @@
 		30919C632AA0AF2300B0E753 /* GroupAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30919C622AA0AF2300B0E753 /* GroupAddView.swift */; };
 		3095EEB92AADD2590063ED97 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095EEB82AADD2590063ED97 /* PersonListView.swift */; };
 		3095EEBB2AB0C08A0063ED97 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095EEBA2AB0C08A0063ED97 /* Popup.swift */; };
+		309C16832B165FFC00FF9277 /* UserNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309C16822B165FFC00FF9277 /* UserNotificationHelper.swift */; };
+		309C16852B16603100FF9277 /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309C16842B16603100FF9277 /* KeyboardToolbar.swift */; };
 		30B1CD5F2AC0AA8300CA8180 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1CD5E2AC0AA8300CA8180 /* ViewMode.swift */; };
 		30CF23972AA632E300BAD4E0 /* PersonAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF23962AA632E300BAD4E0 /* PersonAddView.swift */; };
 		30CF23992AA8A04400BAD4E0 /* DataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF23982AA8A04400BAD4E0 /* DataOperation.swift */; };
@@ -38,7 +40,6 @@
 		30D8A9BC2AD95602001AE67D /* EventAddEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8A9BB2AD95602001AE67D /* EventAddEditView.swift */; };
 		30D8A9BE2ADAEF23001AE67D /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8A9BD2ADAEF23001AE67D /* EventDetailView.swift */; };
 		30D8A9C02ADAFBF5001AE67D /* NotificationSegmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8A9BF2ADAFBF5001AE67D /* NotificationSegmentPickerView.swift */; };
-		30D8A9C22ADC17F4001AE67D /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8A9C12ADC17F4001AE67D /* NotificationHelper.swift */; };
 		30D8A9C42AE00A9E001AE67D /* EditCreateButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8A9C32AE00A9E001AE67D /* EditCreateButtonsView.swift */; };
 		30D9031829ABB880000FEFAC /* PersonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D9031729ABB880000FEFAC /* PersonCellView.swift */; };
 		30DFD4A9299270F7001D2F80 /* KeepInTouchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DFD4A8299270F7001D2F80 /* KeepInTouchApp.swift */; };
@@ -81,6 +82,8 @@
 		30919C622AA0AF2300B0E753 /* GroupAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddView.swift; sourceTree = "<group>"; };
 		3095EEB82AADD2590063ED97 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
 		3095EEBA2AB0C08A0063ED97 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		309C16822B165FFC00FF9277 /* UserNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationHelper.swift; sourceTree = "<group>"; };
+		309C16842B16603100FF9277 /* KeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
 		30B1CD5E2AC0AA8300CA8180 /* ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMode.swift; sourceTree = "<group>"; };
 		30CF23962AA632E300BAD4E0 /* PersonAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAddView.swift; sourceTree = "<group>"; };
 		30CF23982AA8A04400BAD4E0 /* DataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOperation.swift; sourceTree = "<group>"; };
@@ -96,7 +99,6 @@
 		30D8A9BB2AD95602001AE67D /* EventAddEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAddEditView.swift; sourceTree = "<group>"; };
 		30D8A9BD2ADAEF23001AE67D /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		30D8A9BF2ADAFBF5001AE67D /* NotificationSegmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSegmentPickerView.swift; sourceTree = "<group>"; };
-		30D8A9C12ADC17F4001AE67D /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		30D8A9C32AE00A9E001AE67D /* EditCreateButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCreateButtonsView.swift; sourceTree = "<group>"; };
 		30D9031729ABB880000FEFAC /* PersonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCellView.swift; sourceTree = "<group>"; };
 		30DFD4A5299270F7001D2F80 /* KeepInTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepInTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,8 +155,9 @@
 				30711AD32AC475C0008F3E10 /* DateFormatterHelper.swift */,
 				30711ADC2AC6CD68008F3E10 /* Date+Extentions.swift */,
 				30D8A9B92AD952AA001AE67D /* EventCategory+Extentions.swift */,
+				309C16822B165FFC00FF9277 /* UserNotificationHelper.swift */,
+				309C16842B16603100FF9277 /* KeyboardToolbar.swift */,
 				3095EEBA2AB0C08A0063ED97 /* Popup.swift */,
-				30D8A9C12ADC17F4001AE67D /* NotificationHelper.swift */,
 				301718E42AE54A7500E0EEF0 /* KeyboardAdaptive.swift */,
 				301718E62AE54BC100E0EEF0 /* View+Extentions.swift */,
 			);
@@ -356,6 +359,7 @@
 				30E9C98529C2328300A6E22C /* GroupThemeView.swift in Sources */,
 				30EF284829A5076000294159 /* StarterView.swift in Sources */,
 				30EF283F29A3FE9200294159 /* Person.swift in Sources */,
+				309C16852B16603100FF9277 /* KeyboardToolbar.swift in Sources */,
 				302E19912A6AC3B500931F32 /* Groups.swift in Sources */,
 				30EF284629A5047700294159 /* Sample.swift in Sources */,
 				30B1CD5F2AC0AA8300CA8180 /* ViewMode.swift in Sources */,
@@ -396,10 +400,10 @@
 				30EF284C29A507AA00294159 /* GridView.swift in Sources */,
 				30EF284E29A7C21A00294159 /* EventFooterView.swift in Sources */,
 				30EF285029A7D55400294159 /* _PersonListView.swift in Sources */,
+				309C16832B165FFC00FF9277 /* UserNotificationHelper.swift in Sources */,
 				30D9031829ABB880000FEFAC /* PersonCellView.swift in Sources */,
 				301C66192A7D463B008BB019 /* GroupDetailView.swift in Sources */,
 				301718E32AE547C200E0EEF0 /* KeyboardResponder.swift in Sources */,
-				30D8A9C22ADC17F4001AE67D /* NotificationHelper.swift in Sources */,
 				30D8A98E2AD41895001AE67D /* EventCategory.swift in Sources */,
 				30EF285229A8CE2E00294159 /* PersonDetailView.swift in Sources */,
 				30E9C97F29C1F21500A6E22C /* PersistenceController.swift in Sources */,
